@@ -78,8 +78,8 @@ SELECT Star1, Genre, COUNT(*) AS MovieCount
 FROM imdb_top_1000
 WHERE Star1 IS NOT NULL
 	AND Genre IS NOT NULL
-GROUP BY Star1, Genre
-ORDER BY Star1, MovieCount DESC;
+GROUP BY Star1
+ORDER BY MovieCount DESC;
 
 -- Which combination of actors are getting good IMDB_Rating maximum time?
 SELECT Star1, Star2, Star3, Star4, AVG(IMDB_Rating) AS AvgRating, COUNT(*) AS MovieCount
